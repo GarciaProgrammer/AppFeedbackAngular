@@ -1,0 +1,31 @@
+<!-- As a link -->
+<nav class="navbar navbar-light bg-info">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="tela">Home</a>
+  </div>
+</nav>
+
+<div class="row">
+  <div class="col-md-2">
+    <div id="agrupador">
+      <button type="button" (click)="habilitarFormulario()" class="btn btn-primary" id="cadastrarFeedback">Cadastrar Feedback</button>
+      <button type="button" class="btn btn-primary" id="listaFeedback">Ver Lista de Feedbacks</button>
+    </div>
+  </div>
+
+  <div class="col-md-10" id="formularioCadastro" *ngIf="verFormulario" id="perguntas">
+    <form class="mt-2">
+      <div class="form-group">
+        <label for="titulo"> Titulo</label>
+        <input type="text" class="form-control" id="titulo" placeholder="Titulo feedback">
+      </div>
+      <div class="form-group">
+        <label for="questao01">Pergunta</label>
+        <input type="text" class="form-control" id="questao01" placeholder="Descreva sua pergunta">
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+      <button type="button" class="btn btn-primary" (click)="cadastrarNovaPergunta()">Cadastrar nova pergunta</button>
+    </form>
+  </div>
+</div>
+

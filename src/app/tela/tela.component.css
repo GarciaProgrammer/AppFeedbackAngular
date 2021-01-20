@@ -1,0 +1,88 @@
+* { box-sizing: border-box; }
+
+#agrupador {
+  height: 1000px;
+  float: left;
+  width: 200px;
+  padding: 0px !important;
+  margin: 0px;
+  background: #EEE;
+  font-size: 16px;
+}
+
+form{
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.295);
+  padding: 7px;
+}
+.btn {
+  height: 40px;
+  width: auto;
+  margin-top: 10px;
+  margin-left: 7px;
+}
+
+.btn:hover {
+  color: #666;
+  background: #CCC;
+}
+
+li {
+  display: block;
+  height: 70px;
+  width: 200px;
+  background: #EEE;
+  color: #555;
+  text-align: center;
+  line-height: 2.5em;
+}
+li::before {
+  content: '';
+  position: absolute;
+  display: block;
+  left: -1.5em;
+  width: 0;
+  height: 0;
+
+  border-top: 2.5em solid transparent;
+  border-right: 1.563em solid #EEE;
+}
+li::after {
+  content: '';
+  position: absolute;
+  display: block;
+
+  top: 0;
+  right: -1.5em;
+
+  width: 0;
+  height: 0;
+
+  border-top: 2.5em solid #EEE;
+  border-right: 1.563em solid transparent;
+}
+
+/* Hover */
+
+li:hover::after {
+  border-top: 2.5em solid #CCC;
+  border-right: 1.563em solid transparent;
+}
+li:hover::before {
+  border-top: 2.5em solid transparent;
+  border-right: 1.563em solid #CCC;
+}
+
+/* Active */
+
+li:active {
+  color: #BBB;
+  background: #DDD;
+}
+li:active::after {
+  border-top: 2.5em solid #DDD;
+  border-right: 1.563em solid transparent;
+}
+li:active::before {
+  border-top: 2.5em solid transparent;
+  border-right: 1.563em solid #DDD;
+}
